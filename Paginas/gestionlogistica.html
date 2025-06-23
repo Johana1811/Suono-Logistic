@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Logística</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Gestión de logística de eventos</h2>
+    <p>todos los campos son obligatorios para poder guardar la logística del evento</p>
+    <form id="logisticaForm">
+      <div class="row">
+        <div class="field">
+          <label>Nombre del evento</label>
+          <input type="text" required />
+        </div>
+        <div class="field">
+          <label>Fecha del evento</label>
+          <input type="date" required />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>Hora del Evento</label>
+          <input type="..." required />
+        </div>
+        <div class="field">
+          <label>Horario de transporte</label>
+          <input type="..." required />
+        </div>
+        <div class="field">
+          <label>Salida-llegada</label>
+          <input type="text" placeholder="Ej. 9:00 - 12:00" required />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>Ubicación del Evento</label>
+          <input type="text" placeholder="Dirección completa del evento" required />
+        </div>
+        <div class="field">
+          <label>Tipo de evento</label>
+          <select required>
+            <option value="">Seleccionar...</option>
+            <option value="social">Reunión social</option>
+            <option value="corporativo">Evento corporativo</option>
+            <option value="capacitacion">Capacitación</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Observaciones</label>
+        <input type="text" />
+      </div>
+
+      <div class="checkboxes">
+        <label><input type="checkbox" /> Puntualidad</label>
+        <label><input type="checkbox" /> Coordinación de equipo</label>
+      </div>
+
+      <div class="submit-btn">
+        <button type="submit">GUARDAR</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

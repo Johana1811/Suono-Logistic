@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f5f7fc; /* color del segundo CSS */
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: #2d2d66; /* color h2 del segundo CSS */
+}
+
+.form-section,
+.list-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ccc; /* como el form-container */
+  box-shadow: 0 0 10px #e0e0ff; /* como el form-container */
+  margin-bottom: 20px;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  border: 1px solid #bbb; /* como el segundo */
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #6b6bf1;
+  box-shadow: 0 0 3px #b9b9f9;
+}
+
+button {
+  background-color: #19238d; /* botón segundo CSS */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #2f39b0; /* hover del segundo CSS */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #19238d; /* mismo azul del botón */
+  color: #fff;
+}

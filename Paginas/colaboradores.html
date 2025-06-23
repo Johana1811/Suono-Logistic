@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Colaborador</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="colaboradores.css">
+</head>
+<body>
+  <div class="container">
+    <h2>REGISTRAR COLABORADOR</h2>
+    <div class="form-group">
+      <div class="form-control">
+        <label>Nombre completo*</label>
+        <input type="text" placeholder="Tu nombre completo">
+      </div>
+      <div class="form-control">
+        <label>Teléfono</label>
+        <input type="text" placeholder="Ej: 3215678903">
+      </div>
+      <div class="form-control">
+        <label>Número de identificación</label>
+        <input type="text">
+      </div>
+      <div class="form-control">
+        <label>Correo electrónico</label>
+        <input type="email">
+      </div>
+      <div class="form-control">
+        <label>CARGO</label>
+        <select>
+          <option>Seleccionar rol</option>
+        </select>
+      </div>
+      <div class="form-control">
+        <label>Tipo de Contrato</label>
+        <select>
+          <option>Seleccionar</option>
+        </select>
+      </div>
+      <div class="form-control">
+        <label>ESTADO</label>
+        <div class="toggle-container">
+          <input type="text" readonly value="ESTADO">
+          <div class="toggle" id="estadoToggle"></div>
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <button>Usuario</button>
+      <button>Contraseña</button>
+    </div>
+  </div>
+  <script src="colaboradores.js"></script>
+</body>
+</html>

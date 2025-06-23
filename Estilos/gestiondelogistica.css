@@ -1,0 +1,90 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fc;
+  margin: 0;
+  padding: 40px;
+  color: #333;
+}
+
+.form-container {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  max-width: 800px;
+  margin: auto;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #e0e0ff;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #2d2d66;
+}
+
+p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.field {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+input, select {
+  padding: 8px 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #6b6bf1;
+  box-shadow: 0 0 3px #b9b9f9;
+}
+
+.checkboxes {
+  display: flex;
+  gap: 20px;
+  padding-top: 10px;
+}
+
+.submit-btn {
+  text-align: right;
+}
+
+button {
+  background-color: #19238d;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #2f39b0;
+}
