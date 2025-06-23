@@ -7,19 +7,14 @@
   <link rel="stylesheet" href="diseño/style.css">
 </head>
 <body>
-<div class="container">
-  <div class="image-container">
-    <img src="https://via.placeholder.com/300x300?text=Imagen" alt="Imagen ilustrativa">
-  </div>
-
-  <form id="registerForm">
+  <form id="registerForm" class="form-container">
     <h2>Crear cuenta</h2>
 
     <label for="name">Nombre</label>
     <input type="text" id="name" name="name" placeholder="Introduce tu nombre" required>
 
     <label for="phone">Teléfono</label>
-    <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>
+    <input type="tel" id="phone" name="phone" placeholder="+57 300000000" required>
 
     <label for="email">Email</label>
     <input type="email" id="email" name="email" placeholder="mi@ejemplo.com" required>
@@ -39,7 +34,6 @@
 
     <p>¿Ya tienes cuenta? <a href="#">Iniciar sesión</a>.</p>
   </form>
-</div>
 
   <script src="js/register.js"></script>
 </body>
