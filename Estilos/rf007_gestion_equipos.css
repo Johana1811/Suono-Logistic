@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #3842b5;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+input, select, textarea {
+    display: block;
+    margin: 10px 0;
+    padding: 5px;
+    width: 300px;
+}
+
+button {
+    margin: 10px 5px 0 0;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo específico para el botón Editar */
+button.editar {
+    background-color: #3842b5;
+    color: white;
+}
+
+button.editar:hover {
+    background-color: #594fbb;
+}
