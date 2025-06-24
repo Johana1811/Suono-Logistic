@@ -1,0 +1,116 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Lado izquierdo con imagen */
+.left-section {
+  background-color: #f5f5f5;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  width: 70%;
+  height: 70%;
+  background-color: #ddd;
+  border-radius: 8px;
+  background-image: url('https://via.placeholder.com/300x200?text=Imagen');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Lado derecho con el formulario */
+.right-section {
+  width: 50%;
+  padding: 40px;
+}
+
+.right-section h2 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  text-align: center;
+  color: #222;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #3842b5;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2e369b;
+}
+
+.center-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.center-text a {
+  color: #3842b5;
+  text-decoration: none;
+}
+.center-text {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.center-text a {
+  color: #3842b5;
+  text-decoration: none;
+  font-weight: bold;
+}
