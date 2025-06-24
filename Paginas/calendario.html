@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario de eventos</title>
+  <link rel="stylesheet" href="calendario.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calendario de eventos</h1>
+
+    <div class="calendar-header">
+      <button class="nav-btn" id="prevMonth">◀</button>
+      <div id="monthYear">Febrero 2022</div>
+      <button class="nav-btn" id="nextMonth">▶</button>
+    </div>
+
+    <div class="day-names">
+      <div>Mon</div>
+      <div>Tue</div>
+      <div>Wed</div>
+      <div>Thu</div>
+      <div>Fri</div>
+      <div>Sat</div>
+      <div>Sun</div>
+    </div>
+
+    <div class="days" id="days"></div>
+
+    <div class="legend">
+      <div><span class="icon disponible">✔</span> <button class="btn">Disponible</button></div>
+      <div><span class="icon reservado">✖</span> <button class="btn">Reservado</button></div>
+      <div><span class="icon agendado">⏱</span> <button class="btn">Agendado</button></div>
+    </div>
+
+    <footer>
+      <p>Made with <strong>Visily</strong></p>
+    </footer>
+  </div>
+
+  <script src="calendario.js"></script>
+</body>
+</html>

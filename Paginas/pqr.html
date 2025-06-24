@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nueva PQR</title>
+  <link rel="stylesheet" href="pqr.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Nueva PQR</h1>
+
+    <label for="tipo">Tipo de solicitud</label>
+    <select id="tipo">
+      <option value="">Seleccione</option>
+      <option value="peticion">Petición</option>
+      <option value="queja">Queja</option>
+      <option value="reclamo">Reclamo</option>
+      <option value="sugerencia">Sugerencia</option>
+    </select>
+
+    <label for="asunto">Asunto</label>
+    <input type="text" id="asunto" placeholder="Ingrese el asunto">
+
+    <label for="descripcion">Descripción detallada</label>
+    <textarea id="descripcion" placeholder="Describa su solicitud..."></textarea>
+
+    <label for="archivo">Archivos adjuntos</label>
+    <input type="file" id="archivo" multiple>
+
+    <div class="acciones">
+      <button id="menu">🏠 Menú principal</button>
+      <button id="enviar">Enviar</button>
+    </div>
+  </div>
+
+  <script src="pqr.js"></script>
+</body>
+</html>
