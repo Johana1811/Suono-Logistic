@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Cambios de Reservas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Gestión de Cambios de Reservas</h1>
+    <p class="subtitulo">Modifica o cancela tu reserva existente con facilidad.</p>
+
+    <form id="cambiosForm">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="cliente">Nombre del Cliente</label>
+          <input type="text" id="cliente" placeholder="Tu nombre completo" required>
+        </div>
+
+        <div class="form-group">
+          <label for="reserva">Número de Reserva</label>
+          <input type="text" id="reserva" placeholder="Ej: RES12345" required>
+        </div>
+
+        <div class="form-group">
+          <label for="fecha">Fecha y Hora del Evento</label>
+          <input type="datetime-local" id="fecha" required>
+        </div>
+
+        <div class="form-group">
+          <label for="estado">Estado Actual</label>
+          <input type="text" id="estado" placeholder="Confirmada / Pendiente" readonly>
+        </div>
+
+        <div class="form-group">
+          <label for="ubicacion">Ubicación del Evento</label>
+          <input type="text" id="ubicacion" placeholder="Dirección completa del evento" required>
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">Teléfono de Contacto</label>
+          <input type="tel" id="telefono" placeholder="Ej: +123 456 7890" required>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="correo">Correo Electrónico</label>
+          <input type="email" id="correo" placeholder="tu.correo@ejemplo.com" required>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn neutral" onclick="cambiarReserva()">Cambiar</button>
+        <button type="button" class="btn danger" onclick="cancelarReserva()">Cancelar</button>
+        <button type="submit" class="btn primary">Confirmar</button>
+      </div>
+
+      <p class="mensaje" id="mensajeResultado"></p>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

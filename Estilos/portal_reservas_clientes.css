@@ -1,0 +1,93 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f9;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #594fbb;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="file"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #594fbb;
+  box-shadow: 0 0 0 3px rgba(89, 79, 187, 0.2);
+}
+
+input[type="file"] {
+  padding: 6px;
+  font-size: 0.95rem;
+}
+
+.form-actions {
+  margin-top: 35px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 26px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn.cancel {
+  background-color: #888;
+}
+
+.btn.confirm {
+  background-color: #594fbb;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Historial de Reservas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="profile-icon">👤</div>
+    <div class="user-info">
+      <strong>Usuario: Johanna Zambrano</strong>
+      <small>Rol: Administrador</small>
+    </div>
+  </header>
+
+  <div class="top-bar">
+    <div class="search-box">
+      🔍
+      <input type="text" id="busqueda" placeholder="Buscar reservaciones...">
+    </div>
+    <button onclick="cerrarSesion()">⏻ Cerrar Sesión</button>
+  </div>
+
+  <h1>Historial de Reservas</h1>
+
+  <div class="table-container">
+    <table id="tablaReservas">
+      <thead>
+        <tr>
+          <th>Número</th>
+          <th>Cliente</th>
+          <th>Evento</th>
+          <th>Equipos</th>
+          <th>Fecha</th>
+          <th>Estado</th>
+          <th>Detalles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>001</td>
+          <td>Stiven Ferrin</td>
+          <td>Asamblea de conjunto</td>
+          <td>Controles de votación</td>
+          <td>Inicio: 02/06/2025<br>Fin: 02/06/2025</td>
+          <td class="estado finalizado">Finalizado</td>
+          <td><span class="ver-link">Ver</span></td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>Johana Zambrano</td>
+          <td>Matrimonio</td>
+          <td>Sonido, Luces, DJ</td>
+          <td>Inicio: 06/06/2025<br>Fin: 07/06/2025</td>
+          <td class="estado cancelado">Cancelado</td>
+          <td><span class="ver-link">Ver</span></td>
+        </tr>
+        <tr>
+          <td>003</td>
+          <td>Lorean Hernandez</td>
+          <td>Cumpleaños Infantil</td>
+          <td>Sonido, Luces, DJ</td>
+          <td>Inicio: 25/05/2025<br>Fin: 25/05/2025</td>
+          <td class="estado finalizado">Finalizado</td>
+          <td><span class="ver-link">Ver</span></td>
+        </tr>
+        <tr>
+          <td>004</td>
+          <td>Harold Riaño</td>
+          <td>Concierto</td>
+          <td>Sonido, Luces, Micrófonos</td>
+          <td>Inicio: 08/06/2025<br>Fin: 09/06/2025</td>
+          <td class="estado proximo">Próximo</td>
+          <td><span class="ver-link">Ver</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <button class="regresar-btn" onclick="regresar()">🔙 Regresar</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
