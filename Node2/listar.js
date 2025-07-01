@@ -1,17 +1,23 @@
 const express = require('express');
+const path = require('path');
 require('./conexion');
-const Usuario = require('./modeloUsuario');
 const app = express();
 const PORT = 3000;
 
-app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
-// Ruta raíz redirige al formulario de registro
+// Servir archivos estáticos
+app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/portal', express.static(path.join(__dirname, 'portal')));
+app.use('/paneladmi', express.static(path.join(__dirname, 'paneladmi')));
+
+// Redirección a la página de inicio del portal
 app.get('/', (req, res) => {
-  res.redirect('/insertar');
+  res.redirect('/portal/inicio.html');
 });
 
-// Ruta opcional para ver la lista de usuarios manualmente
+// Ruta para listar usuarios (la dejo intacta por si la usás en el futuro)
+const Usuario = require('./modeloUsuario');
 app.get('/usuarios', async (req, res) => {
   try {
     const resultados = await Usuario.find();
@@ -20,7 +26,7 @@ app.get('/usuarios', async (req, res) => {
     <html>
     <head>
         <title>Usuarios</title>
-        <link rel="stylesheet" href="/estilos.css">
+        <link rel="stylesheet" href="/public/estilos.css">
     </head>
     <body>
     <h1>Lista de Usuarios</h1>
@@ -37,8 +43,7 @@ app.get('/usuarios', async (req, res) => {
           <td>${usuario.nombre}</td>
           <td>${usuario.email}</td>
           <td>
-            <a href="/modificar/${usuario._id}">Editar</a> |
-            <a href="/eliminar/${usuario._id}" onclick="return confirm('¿Estás seguro de eliminar este usuario?');">Eliminar</a>
+            <!-- En el futuro puedes agregar editar/eliminar aquí -->
           </td>
         </tr>
       `;
@@ -51,12 +56,11 @@ app.get('/usuarios', async (req, res) => {
   }
 });
 
-// Rutas
+// Rutas activas
 app.use('/insertar', require('./insertar'));
-app.use('/modificar', require('./modificar'));
-app.use('/eliminar', require('./eliminar'));
 app.use('/login', require('./login'));
+app.use('/recuperar', require('./recuperar'));
 
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`✅ Servidor corriendo en http://localhost:${PORT}`);
 });

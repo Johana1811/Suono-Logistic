@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const bcrypt = require('bcryptjs');
 const Usuario = require('./modeloUsuario');
 
 router.use(express.urlencoded({ extended: true }));
@@ -9,7 +10,7 @@ router.get('/', (req, res) => {
     <html>
     <head>
       <title>Iniciar Sesión</title>
-      <link rel="stylesheet" href="/estilos.css">
+      <link rel="stylesheet" href="/public/estilos.css">
     </head>
     <body>
       <div class="container">
@@ -27,7 +28,7 @@ router.get('/', (req, res) => {
 
               <button type="submit">Entrar</button>
           </form>
-          <p class="center-text"><a href="#">¿Olvidaste tu contraseña?</a></p>
+          <p class="center-text"><a href="/recuperar">¿Olvidaste tu contraseña?</a></p>
         </div>
       </div>
     </body>
@@ -44,11 +45,12 @@ router.post('/', async (req, res) => {
       return res.send('<p>Usuario no encontrado</p><a href="/login">Intentar de nuevo</a>');
     }
 
-    if (usuario.password !== password) {
+    const passwordValida = await bcrypt.compare(password, usuario.password);
+    if (!passwordValida) {
       return res.send('<p>Contraseña incorrecta</p><a href="/login">Intentar de nuevo</a>');
     }
 
-    res.send(`<p>Bienvenido, ${usuario.nombre}!</p><a href="/">Ir al inicio</a>`);
+    res.redirect('/paneladmi/admin.html');
   } catch (err) {
     res.send('Error: ' + err.message);
   }
